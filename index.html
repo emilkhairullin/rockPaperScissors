@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Rock Paper Scissors</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/main.min.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-10 offset-md-1">
+          <div class="playground">
+            <h1 class="playground-heading visually-hidden">Rock paper scissors game </h1>
+            <div class="playground-input">
+              <div class="choice">
+                <button class="choice-button choice-button-rock" data-choice="rock"></button>
+                <h2 class="choice-heading">Rock</h2>
+              </div>
+              <div class="choice">
+                <button class="choice-button choice-button-paper" data-choice="paper"></button>
+                <h2 class="choice-heading">Paper</h2>
+              </div>
+              <div class="choice">
+                <button class="choice-button choice-button-scissors" data-choice="scissors"></button>
+                <h2 class="choice-heading">scissors</h2>
+              </div>
+            </div>
+            <div class="row playground-score">
+              <div class="col-5 score-player">
+                <div class="playground-score-player">
+                  <h2 class="player">You</h2><span class="player-score" id="player-score">0</span>
+                </div>
+              </div>
+              <div class="col-2 score-versus">
+                <div class="playground-score-standings"><span class="versus">vs</span></div>
+              </div>
+              <div class="col-5 score-player score-computer">
+                <div class="playground-score-player playground-score-computer">
+                  <h2 class="player">Computer</h2><span class="player-score" id="computer-score">0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-10 col-md-8 offset-1 offset-md-2">
+          <div class="gamelog">
+            <h2 class="gamelog-heading">History</h2>
+            <div id="gamelog-messages">
+              <p class="gamelog-message" id="message-empty">Empty</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal visually-hidden" id="modal">
+      <div class="modal-container">
+        <h2 class="modal-heading" id="modal-heading">empty</h2>
+        <p class="modal-text" id="modal-text">empty</p>
+        <p class="modal-replay" id="modal-replay"> Do you want to play again?</p>
+        <button class="modal-btn" id="replay">yes</button>
+        <button class="modal-btn" id="end-game">no</button>
+      </div>
+    </div>
+    <div class="modal visually-hidden" id="modal-end">
+      <div class="modal-container">
+        <h2 class="modal-heading">That's it :)</h2>
+        <p class="modal-heading">This game was made by <br><a href="https://github.com/emilkhairullin" target="_blank">Emil Khairullin <br></a>with love and passion</p>
+        <p class="modal-thanks">Thanks to <br><a href="https://www.theodinproject.com/dashboard" target="_blank">The odin project </a></p>
+      </div>
+    </div>
+  </body>
+  <script src="js/scripts.min.js"></script>
+</html>

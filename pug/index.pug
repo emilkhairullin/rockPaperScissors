@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Rock Paper Scissors
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900', rel='stylesheet')
+        link(rel="stylesheet", href="css/main.min.css")
+    body
+        .container
+            .row
+                .col-12.col-md-10.offset-md-1
+                    .playground
+                        h1.playground-heading.visually-hidden Rock paper scissors game 
+                        .playground-input
+                            .choice
+                                button.choice-button.choice-button-rock(data-choice="rock")
+                                h2.choice-heading Rock
+                            .choice
+                                button.choice-button.choice-button-paper(data-choice="paper")
+                                h2.choice-heading Paper
+                            .choice
+                                button.choice-button.choice-button-scissors(data-choice="scissors")
+                                h2.choice-heading scissors
+                        .row.playground-score
+                            .col-5.score-player
+                                .playground-score-player
+                                    h2.player You
+                                    span#player-score.player-score 0
+                            .col-2.score-versus
+                                .playground-score-standings
+                                    span.versus vs
+                            .col-5.score-player.score-computer
+                                .playground-score-player.playground-score-computer
+                                    h2.player Computer
+                                    span#computer-score.player-score 0
+            .row
+                .col-10.col-md-8.offset-1.offset-md-2
+                    .gamelog
+                        h2.gamelog-heading History
+                        div#gamelog-messages
+                            p#message-empty.gamelog-message Empty
+        #modal.modal.visually-hidden
+            .modal-container
+                h2#modal-heading.modal-heading empty
+                p#modal-text.modal-text empty
+                p#modal-replay.modal-replay  Do you want to play again?
+                button#replay.modal-btn yes
+                button#end-game.modal-btn no
+        #modal-end.modal.visually-hidden
+            .modal-container
+                h2.modal-heading That's it :)
+                p.modal-heading This game was made by <br>
+                    a(href="https://github.com/emilkhairullin" target="_blank") Emil Khairullin <br>
+                    | with love and passion
+                p.modal-thanks
+                    | Thanks to <br>
+                    a(href="https://www.theodinproject.com/dashboard" target="_blank") The odin project 
+
+
+    script(src="js/scripts.min.js")
